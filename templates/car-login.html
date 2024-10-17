@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Login</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .login-container {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        width: 300px;
+        text-align: center;
+      }
+      h1 {
+        color: #004a99;
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      p {
+        color: #555;
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        text-align: left;
+      }
+      input[type="text"],
+      input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #f39c12;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+      }
+      button:hover {
+        background-color: #e67e22;
+      }
+    </style>
+    <script>
+      function showLoading() {
+        document.getElementById("loading").style.display = "block";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="login-container">
+      <h1>Login Your Vehicle</h1>
+      <p>
+        Enter your vehicle number and kilometers driven to access your car
+        details.
+      </p>
+      <form action="/submit-car-number" method="POST" onsubmit="showLoading()">
+        <label for="car_number">Vehicle Number:</label>
+        <input
+          type="text"
+          id="car_number"
+          name="car_number"
+          required
+          placeholder="e.g., MP09WE1094"
+        />
+
+        <label for="km_driven">Kilometers Driven:</label>
+        <input
+          type="number"
+          id="km_driven"
+          name="km_driven"
+          required
+          placeholder="e.g., 10000"
+          min="0"
+        />
+
+        <button type="submit">Submit</button>
+      </form>
+      <div id="loading" class="loading" style="display: none">
+        Loading, please wait...
+      </div>
+    </div>
+  </body>
+</html>

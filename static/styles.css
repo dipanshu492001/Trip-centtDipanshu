@@ -1,0 +1,260 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Section */
+.header {
+    background: linear-gradient(to bottom right, #0056b3, #48cae4);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.header-text {
+    text-align: left;
+}
+
+.header h1 {
+    font-size: 3.5em;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.header p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #f7b500;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #f98f00;
+}
+
+/* Features Section */
+.features-section {
+    padding: 60px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.features-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.feature {
+    background-color: #f1f1f1;
+    padding: 40px 20px;
+    border-radius: 10px;
+    flex: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature img {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.feature p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Trust Section */
+.trust-section {
+    background-color: #0056b3;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.trust-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.trust-section p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #ccc;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+.footer p {
+    margin: 0;
+}
+
+
+/* Login Page */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+}
+
+.login-box {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+}
+
+.login-box h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #0056b3;
+}
+
+.login-box p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.login-box label {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    display: block;
+    color: #333;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.1em;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.login-box input:focus {
+    border-color: #0056b3;
+}
+
+.cta-button {
+    background-color: #f7b500;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    width: 100%;
+    display: inline-block;
+    border: none;
+}
+
+.cta-button:hover {
+    background-color: #f98f00;
+}
+
+
+/* Car Details Page */
+.car-details-container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.car-details-container h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #0056b3;
+}
+
+.car-info {
+    font-size: 1.2em;
+    line-height: 1.8;
+}
+
+.car-info p {
+    margin: 10px 0;
+}
+
+.cta-button {
+    background-color: #f7b500;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #f98f00;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Details - Trip-Centt</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="car-details-container">
+        <h1>Vehicle Details for {{ car_data['reg_no'] }}</h1>
+        
+        <div class="car-info">
+            <p><strong>Registration Date:</strong> {{ car_data['reg_date'] }}</p>
+            <p><strong>Fuel Type:</strong> {{ car_data['fuel_descr'] }}</p>
+            <p><strong>Manufacturer:</strong> {{ car_data['vehicle_manufacturer_name'] }}</p>
+            <p><strong>Model:</strong> {{ car_data['model'] }}</p>
+            <p><strong>Engine Number:</strong> {{ car_data['engine_no'] }}</p>
+            <p><strong>Chassis Number:</strong> {{ car_data['chassis_no'] }}</p>
+            <p><strong>Ex-Showroom Price:</strong> {{ car_data['sale_amount'] }}</p>
+            
+            <!-- Add more fields as needed from the API response -->
+        </div>
+
+        <a href="{{ url_for('car_login') }}" class="cta-button">Back to Login</a>
+    </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Details Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f4f4f9;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        .card {
+            margin-bottom: 20px;
+        }
+        .card-header {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .predicted-price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #28a745;
+        }
+        .details-table td {
+            padding: 10px;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center">Car Details Dashboard</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Card for showing car details fetched from API -->
+                <div class="card">
+                    <div class="card-header">Car Information</div>
+                    <div class="card-body">
+                        <table class="table details-table">
+                            <tr><td>Car Name:</td><td>{{ car_data['vehicle_manufacturer_name']+" "+car_data['model'] }}</td></tr>
+                            <tr><td>Brand:</td><td>{{ car_data['vehicle_manufacturer_name'] }}</td></tr>
+                            <tr><td>Model:</td><td>{{ car_data['model'] }}</td></tr>
+                            <tr><td>Fuel Type:</td><td>{{ car_data['fuel_descr'] }}</td></tr>
+                            <tr><td>Year:</td><td>{{ car_data['reg_date'] }}</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- Card for showing predicted price -->
+                <div class="card">
+                    <div class="card-header">Predicted Car Price</div>
+                    <div class="card-body text-center">
+                        <p class="predicted-price">₹{{ predicted_price }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+

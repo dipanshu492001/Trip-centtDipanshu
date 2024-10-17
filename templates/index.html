@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip-Centt - Trusted Second-Hand Vehicle Utility System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <img src="{{ url_for('static', filename='Trip.png') }}" alt="Trip-Centt Logo" class="logo">
+            <div class="header-text">
+                <h1>Trip-Centt</h1>
+                <p>Revolutionizing Trust and Transparency in the Second-Hand Vehicle Market</p>
+                <a href="{{ url_for('car_login') }}" class="cta-button">Login Your Vehicle</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="features" class="features-section">
+        <div class="container">
+            <h2>What We Offer</h2>
+            <div class="features">
+                <div class="feature">
+                    <img src="{{ url_for('static', filename='valuation-icon.png') }}" alt="Car Valuation">
+                    <h3>Car Valuation</h3>
+                    <p>Accurately assess the value of your vehicle using service history, kilometers driven, model year, and more.</p>
+                </div>
+                <div class="feature">
+                    <img src="{{ url_for('static', filename='trip-icon.png') }}" alt="Trip Behavior">
+                    <h3>Trip Behavior Tracking</h3>
+                    <p>Monitor key driving metrics like acceleration, braking, fuel consumption, and more to track driver behavior.</p>
+                </div>
+                <div class="feature">
+                    <img src="{{ url_for('static', filename='docs-icon.png') }}" alt="Document Storage">
+                    <h3>Document Container</h3>
+                    <p>Store essential documents like PUC, RC, and insurance securely in one place for easy access.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="trust-section">
+        <div class="container">
+            <h2>Why Choose Trip-Centt?</h2>
+            <p>With meter tampering and opaque vehicle histories affecting trust in the second-hand vehicle market, Trip-Centt ensures transparency and reliable data. Our solution helps foster trust between buyers and sellers by providing a holistic view of the car’s value, behavior, and documents.</p>
+            <a href="#" class="cta-button">Get Started Today</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Trip-Centt. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
